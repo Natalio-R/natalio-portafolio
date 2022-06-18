@@ -1,0 +1,576 @@
+@import "../index.css";
+
+/* Menú */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.navBar_h1 {
+  font-size: 4em;
+  text-decoration: none;
+  color: var(--Black);
+  font-family: "Just Another Hand", "Roboto", "Montserrat", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+}
+
+.navBar_h1::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  height: 0.2em;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--Gradient);
+  z-index: -1;
+}
+
+.navBar_ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar_li {
+  margin: 1rem 1.5rem;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: var(--Black);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navBar_li::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  height: 0em;
+  width: 100%;
+  border-radius: 4px;
+  background: var(--Gradient);
+  z-index: -1;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navBar_li:hover:after {
+  height: 0.5em;
+}
+
+.navBar_li:last-child {
+  margin-right: 0;
+}
+
+.navBar_Switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 11rem;
+}
+
+.con_01 h2 {
+  max-width: 600px;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: 3.2em;
+  font-weight: 800;
+}
+
+.con_01 h2 > span {
+  background: var(--Gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.con_01 p {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Roboto", "Montserrat", sans-serif;
+  margin: 1rem 0 2rem;
+}
+
+.con_01 .brand_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.con_01 .brand_list button.brand {
+  position: relative;
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+  width: 40%;
+}
+
+.con_01 .brand_list button:hover {
+  background-color: var(--Black);
+}
+
+.con_01 .brand_list button.brand .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--Black);
+  border-radius: 0.8rem;
+}
+
+.con_01 .brand_list button.brand .circle .icon {
+  color: var(--White);
+  font-size: 1.8em;
+}
+
+.con_01 .brand_list button.brand .button-text {
+  transition: all 0.2s linear;
+  color: var(--Black);
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.5em;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  margin-left: 0.8rem;
+}
+
+.con_01 .brand_list button.brand:hover .button-text {
+  color: var(--White);
+}
+
+.con_02 img {
+  width: 500px;
+  border: 8px solid var(--White);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 12px;
+  border-radius: 18px;
+  user-select: none;
+}
+
+/* Headers */
+section.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 8rem 0;
+}
+
+section.contenido h2.title {
+  font-size: 3.2em;
+  font-weight: 800;
+  font-family: "Montserrat", "Poppins", "Roboto", sans-serif;
+}
+
+section.contenido p.subtitle {
+  font-size: 1.5em;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: var(--Gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.contenido p.description {
+  font-size: 1.3em;
+  max-width: 900px;
+  font-family: "Poppins", "Montserrat", "Roboto", sans-serif;
+  margin: 1rem 0;
+}
+
+section.contenido button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: "Montserrat", "Roboto", "Poppins", sans-serif;
+}
+
+section.contenido button.learn-more {
+  width: 10rem;
+  height: auto;
+}
+
+section.contenido button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--Gradient);
+  border-radius: 0.5rem;
+}
+
+section.contenido button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: var(--White);
+}
+
+section.contenido button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.4rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+section.contenido button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.35rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid var(--White);
+  border-right: 0.125rem solid var(--White);
+  transform: rotate(45deg);
+}
+
+section.contenido button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--Black);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+section.contenido button:hover .circle {
+  width: 100%;
+}
+
+section.contenido button:hover .circle .icon.arrow {
+  background: var(--White);
+  transform: translate(1rem, 0);
+}
+
+section.contenido button:hover .button-text {
+  color: var(--White);
+}
+
+/* Sobre Mi */
+header.bg_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Gradient);
+}
+
+header.bg_header h2 {
+  color: var(--White);
+  margin: 6rem 0;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 800;
+}
+
+section p.descripcion {
+  margin: 1rem 10%;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+section .extra {
+  background: linear-gradient(110deg, #bff098, #6fd6ff);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 1rem 10%;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+/* Proyectos */
+section .trabajos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem 15% 0;
+}
+
+section .trabajo {
+  width: calc(33.33333% - 20px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+section .trabajo h3 {
+  font-size: 25px;
+  font-family: "Poppins", "Montserrat", "Roboto", sans-serif;
+}
+
+section .trabajo p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+section .trabajo a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.1s linear;
+}
+
+section .trabajo a:hover {
+  color: #fff;
+}
+
+section .trabajo img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 2rem;
+  border: none;
+  user-select: none;
+}
+
+section .trabajo button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: "Montserrat", "Roboto", "Poppins", sans-serif;
+}
+
+section .trabajo button.learn-more {
+  width: 10rem;
+  height: auto;
+}
+
+section .trabajo button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--Gradient);
+  border-radius: 0.5rem;
+}
+
+section .trabajo button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: var(--White);
+}
+
+section .trabajo button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.4rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+section .trabajo button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.35rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid var(--White);
+  border-right: 0.125rem solid var(--White);
+  transform: rotate(45deg);
+}
+
+section .trabajo button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--Black);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+section .trabajo button:hover .circle {
+  width: 100%;
+}
+
+section .trabajo button:hover .circle .icon.arrow {
+  background: var(--White);
+  transform: translate(1rem, 0);
+}
+
+section .trabajo button:hover .button-text {
+  color: var(--White);
+}
+
+section .trabajos h4.subtitle {
+  color: var(--DarkGray);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+section article.w-behance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 4rem 15% 0;
+  background-image: var(--Gradient);
+  color: var(--White);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+section article.w-behance h3 {
+  font-size: 40px;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+section article.w-behance p {
+  font-size: 24px;
+  width: 80%;
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3rem 15%;
+}
+
+footer .footer_h2 {
+  font-family: "Montserrat", "Roboto", "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+footer .footer_p {
+  font-family: "Roboto", "Montserrat", "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  width: 500px;
+  line-height: 30px;
+  text-align: left;
+}
+
+footer .footer_col .brand_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+footer .footer_col .brand_list button.brand {
+  position: relative;
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+  width: 60%;
+}
+
+footer .footer_col .brand_list button:hover {
+  background-color: var(--Black);
+}
+
+footer .footer_col .brand_list button.brand .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--Black);
+  border-radius: 0.8rem;
+}
+
+footer .footer_col .brand_list button.brand .circle .icon {
+  color: var(--White);
+  font-size: 1.8em;
+}
+
+footer .footer_col .brand_list button.brand .button-text {
+  transition: all 0.2s linear;
+  color: var(--Black);
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.5em;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  margin-left: 0.8rem;
+}
+
+footer .footer_col .brand_list button.brand:hover .button-text {
+  color: var(--White);
+}
