@@ -2,6 +2,7 @@ import React from "react";
 import movileuropa from "../../assets/movileuropa.png";
 import crypto from "../../assets/crypto.png";
 import restaurante from "../../assets/restaurante.png";
+import moviltogo from "../../assets/moviltogo.png";
 
 const Work = () => {
   return (
@@ -66,17 +67,14 @@ const Work = () => {
             />
           </div>
           <div className="trabajo">
-            <h3>Web Restaurante</h3>
+            <h3>MovilToGo</h3>
             <p>
-              Una compacta y básica web para un restaurante, con versión en modo
-              oscuro. Diseño adaptado a todos los dispositivos y optimizado para
-              la mayor rapidez. Contiene un menu desplegable y con acceso a los
-              ingredientes de cada plato, completo pero sin estar cargado.
+              Página web para una tienda donde expertos se encargarán de reparar y devolverte tu equipo reparado por completo y con garantía. Pueden reparar cualquier clase de dispositivo electrónico, desde teléfonos móviles hasta patinetes eléctricos o consolas.
             </p>
             <button
               class="learn-more"
               onClick={() => {
-                window.open("https://comida-deliciosa.netlify.app", "_blank");
+                window.open("https://moviltogo.es", "_blank");
               }}
             >
               <span class="circle" aria-hidden="true">
@@ -85,9 +83,9 @@ const Work = () => {
               <span class="button-text">Ver más</span>
             </button>
             <img
-              src={restaurante}
-              alt="Imagen del proyecto de una web para Restaurante"
-              title="Web Restaurante"
+              src={moviltogo}
+              alt="Imagen del proyecto de MovilToGo"
+              title="MovilToGo"
             />
           </div>
           <h4 class="subtitle">
